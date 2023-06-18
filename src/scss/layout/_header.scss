@@ -1,0 +1,145 @@
+.header{
+    @include res('margin-top', 28px);
+    @include res('margin-bottom', 107px);
+    @include media(768){
+        @include resa('margin-top', 7px);
+        @include resa('margin-bottom', 29px);
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__left{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__p{
+        @include res('font-size', 18px);
+        @include media(768){
+            display: none;
+        }
+    }
+    &__logo{
+        @include res('margin-right', 22px);
+        @include res('width', 200px);
+        line-height: 0;
+        @include media(768){
+            @include resa('width', 150px);
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__info{
+        display: flex;
+        align-items: center; 
+        justify-content: flex-start;
+        @include res('gap', 17px);
+        @include media(768){
+            display: none;
+        }
+        &-p{
+            @include res('font-size', 18px);
+            line-height: 139%;
+            font-weight: 400;
+            color: #000;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                @include res('top', 7px);
+                @include res('left', -14px);
+                @include res('width', 9px);
+                @include res('height', 9px); 
+                background: #3FE04F;
+                border-radius: 50%;
+                animation: blink 1s infinite;
+            }
+        }
+    }
+    &__soc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include res('gap', 8px);
+        &-link{
+            @include res('width', 50px);
+            @include res('height', 50px);
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__phone{
+        @include media(768){
+            display: none;
+        }
+        &-p{
+            @include res('font-size', 18px);
+            @include res('margin-bottom', 4px);
+            @include res('margin-left', 11px);
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                @include res('top', 7px);
+                @include res('left', -14px);
+                @include res('width', 9px);
+                @include res('height', 9px); 
+                background: #3FE04F;
+                border-radius: 50%;
+                animation: blink 1s infinite;
+            }
+        }
+        &-link{
+            @include res('font-size', 28px);
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+    &__col{
+        display: none;
+        @include media(768){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-p{
+            @include resa('font-size', 9px);
+            @include resa('margin-bottom', 4px);
+        }
+    }
+    &__text{
+        @include resa("font-size", 8px);
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include resa("gap", 8px);
+        @include resa("margin-bottom", 5px);
+    }
+    &__link{
+        @include resa('width', 25px);
+        @include resa('height', 25px);
+        display: block;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

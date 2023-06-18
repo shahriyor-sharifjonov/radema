@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.min.css")
+        title Document
+    body 
+        .wrapper 
+            include components/header 
+            +header 
+            main.main 
+                .intro 
+                    .intro__body.container 
+                        p.intro__p Коридоры пустые? Врачи скучают? <br>Нужно больше пациентов?
+                        h1.intro__title Забронируйте место<br>на стратегическую сессию<br> с медицинским маркетологом
+                        .intro__desc И получите чек-лист для проверки эффективности текущего маркетинга вашей клиники по 72 пунктам <span>В ПОДАРОК</span>
+                        .intro__right 
+                            .intro__wrapper 
+                                p.intro__txt В июне<br>осталось 
+                                .intro__calendar 
+                                    p.intro__calendar-date 2
+                                    p.intro__calendar-p места
+                            .intro__img 
+                                .img 
+                                    img(src="@img/person.png", alt="" draggable="false")
+                                .img.sm 
+                                    img(src="@img/person-sm.png", alt="" draggable="false")
+                                .open-info.intro__circle i
+                                    .intro__line
+                                    .info.img__info 
+                                        p.info__title Вячеслав Радецкий
+                                        .info__li Медицинский маркетолог с опытом >6 лет
+                                        .info__li Основатель маркетингового агентства RADEMA
+                                .intro__infos 
+                                    p.intro__name Вячеслав Радецкий
+                                    p.intro__info Медицинский маркетолог с опытом >6 лет<br>Основатель маркетингового агентства RADEMA
+                        .intro__buttons
+                            button(type="button" data-target="register").intro__btn.popup-open Забронировать место<br>и скачать чек-лист
+                            .intro__row
+                                button(type="button" data-target="video").intro__pause.popup-open 
+                                    img(src="@img/intro-pause.svg", alt="" draggable="false")
+                                    .intro__pause-line
+                                .intro__pause-info 
+                                    p.intro__pause-subtitle Работаем на результат
+                                    p.intro__pause-desc Увеличили выручку клиники на 50%
+                                    button(type="button" data-target="video").intro__pause-link.popup-open Посмотрите видео-отзыв директора
+                        p.intro__warning Торопитесь!
+                        p.intro__text Количество мест на стратегическую сессию с медицинским маркетологом ограничено
+            include components/popups
+            +popups
+            include components/footer 
+            +footer
+        script(src="js/app.min.js") 

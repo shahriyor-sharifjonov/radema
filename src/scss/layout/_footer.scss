@@ -1,0 +1,35 @@
+// Футер
+.footer{
+    @include res('height', 47px);
+    background: rgba(166, 243, 251, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media(768){
+        @include resa('height', 117px);
+    }
+    &__body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media(768){
+            flex-direction: column;
+            @include resa('gap', 12px);
+        }
+    }
+    &__p{
+        @include res('font-size', 12px);
+        @include media(768){
+            @include resa('font-size', 9px);
+            text-align: center;
+        }
+    }
+    &__link{
+        @include res('font-size', 12px);
+        text-decoration: underline;
+        @include media(768){
+            @include resa('font-size', 9px);
+            text-align: center;
+        }
+    }
+}
