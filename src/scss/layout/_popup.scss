@@ -13,7 +13,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 300ms ease-out, visibility 300ms ease-out;
-    @include media(576){
+    @include media(768){
         padding: 15px;
     }
     &#register{
@@ -21,7 +21,7 @@
             @include res('width', 899px);
             @include res('height', 805px);
             background-color: #ffffff;
-            @include media(576){
+            @include media(768){
                 @include resa('width', 899px);
                 height: max-content;
             }
@@ -34,7 +34,7 @@
                 @include res('top', 129px);
                 right: 0;
                 z-index: -1;
-                @include media(576){
+                @include media(768){
                     display: none;
                 }
             }
@@ -68,7 +68,7 @@
             background-color: #ffffff;
             @include res('width', 899px);
             background-color: #ffffff;
-            @include media(576){
+            @include media(768){
                 @include resa('width', 899px);
                 height: calc(100% - 100px);
             }
@@ -117,7 +117,7 @@
         isolation: isolate;
         overflow: hidden;
         overflow-y: auto;
-        @include media(576){
+        @include media(768){
             @include resa('border-radius', 20px);
             // @include resa('height', 700px);
             height: max-content;
@@ -133,7 +133,7 @@
         @include res('padding-bottom', 20px);
         @include res('padding-right', 26px);
         @include res('padding-left', 37px);
-        @include media(576){
+        @include media(768){
             @include resa('padding-top', 15px);
             @include resa('padding-bottom', 15px);
             @include resa('padding-right', 15px);
@@ -158,7 +158,7 @@
         @include res('right', 20px);
         @include res('height', 20px);
         @include res('width', 20px);
-        @include media(576){
+        @include media(768){
             @include resa('top', 20px);
             @include resa('right', 20px);
             @include resa('height', 20px);
@@ -173,7 +173,7 @@
         font-weight: 700;
         @include res('font-size', 40px);
         @include res('margin-bottom', 23px);
-        @include media(576){
+        @include media(768){
             @include resa('font-size', 20px);
             @include resa('margin-bottom', 10px);
             @include resa('max-width', 280px);
@@ -182,7 +182,7 @@
     &__p{
         @include res('font-size', 21px);
         @include res('margin-bottom', 7px);
-        @include media(576){
+        @include media(768){
             @include resa('font-size', 14px);
             @include resa('margin-bottom', 10px);
         }
@@ -191,7 +191,7 @@
         font-weight: 700;
         @include res('font-size', 24px);
         @include res('margin-bottom', 19px);
-        @include media(576){
+        @include media(768){
             @include resa('font-size', 16px);
             @include resa('margin-bottom', 10px);
         }
@@ -200,7 +200,7 @@
         @include res('margin-bottom', 12px);
         @include res('margin-left', 46px);
         @include res('font-size', 14px);
-        @include media(576){
+        @include media(768){
             @include resa('font-size', 14px);
             @include resa('margin-bottom', 4px);
             margin-left: 0;
@@ -209,15 +209,15 @@
     &__input{
         border: solid #E5192E;
         width: 100%;
-        @include res('padding-top', 33px);
-        @include res('padding-bottom', 33px);
+        @include res('padding-top', 30px);
+        @include res('padding-bottom', 30px);
         @include res('padding-left', 46px);
         @include res('padding-right', 46px);
         @include res('border-radius', 500px);
         @include res('border-width', 1px);
         @include res('font-size', 14px);
         @include res('max-width', 325px);
-        @include media(576){
+        @include media(768){
             width: 100%;
             max-width: 100%;
             @include resa('font-size', 12px);
@@ -227,7 +227,7 @@
         }
         &:not(:last-of-type){
             @include res('margin-bottom', 12px);
-            @include media(576){
+            @include media(768){
                 margin-bottom: 0;
             }
         }
@@ -241,14 +241,13 @@
         width: 100%;
         @include res('padding-top', 15px);
         @include res('padding-bottom', 15px);
-        @include res('margin-bottom', 12px);
         @include res('padding-left', 46px);
         @include res('padding-right', 23px);
         @include res('border-radius', 500px);
         @include res('border-width', 1px);
         @include res('font-size', 14px);
         @include res('max-width', 325px);
-        @include media(576){
+        @include media(768){
             width: 100%;
             max-width: 100%;
             @include resa('font-size', 12px);
@@ -259,7 +258,7 @@
         select{
             border: none;
             @include res('font-size', 14px);
-            @include media(576){
+            @include media(768){
                 @include resa('font-size', 12px);
             }
         }
@@ -269,7 +268,7 @@
         @include res('min-width', 50px);
         @include res('width', 50px);
         @include res('height', 50px);
-        @include media(576){
+        @include media(768){
             @include resa('min-width', 25px);
             @include resa('width', 25px);
             @include resa('height', 25px);
@@ -283,7 +282,8 @@
         }
     }
     &__item{
-        @include media(576){
+        @include res('margin-bottom', 10px);
+        @include media(768){
             &:not(:last-of-type){
                 @include resa('margin-bottom', 10px);
             }
@@ -304,13 +304,13 @@
         @include res('border-radius', 500px);
         @include res('padding-top', 30px);
         @include res('padding-bottom', 30px);
-        @include media(576){
+        @include media(768){
             max-width: 100%;
             width: 100%;
             @include resa('font-size', 12px);
             @include resa('height', 50px);
             @include resa('gap', 15px);
-            @include resa('margin-top', 16px);
+            @include resa('margin-top', 12px);
         }
         &:hover{
             background: #db071c;
@@ -318,7 +318,7 @@
         svg{
             @include res('width', 20px);
             @include res('height', 20px);
-            @include media(567){
+            @include media(768){
                 @include resa('width', 15px);
                 @include resa('height', 15px);
             }
@@ -332,7 +332,7 @@
         @include res('gap', 9px);
         @include res('margin-top', 13px);
         @include res('margin-left', 33px);
-        @include media(576){
+        @include media(768){
             @include resa('margin-top', 16px);
             @include resa('gap', 9px);
         }
@@ -345,7 +345,7 @@
             @include res('height', 20px);
             @include res('border-radius', 2px);
             @include res('border-width', 1px);
-            @include media(576){
+            @include media(768){
                 @include resa('width', 15px);
                 @include resa('height', 15px);
                 @include resa('border-radius', 2px);
@@ -379,7 +379,7 @@
     &__label{
         @include res('font-size', 10px);
         line-height: 150%;
-        @include media(576){
+        @include media(768){
             @include resa('font-size', 10px);
         }
     }
@@ -388,7 +388,7 @@
         line-height: 150%;
         text-decoration: underline;
         color: #E5192E;
-        @include media(576){
+        @include media(768){
             @include resa('font-size', 10px);
         }
     }
@@ -396,7 +396,7 @@
         @include res('margin-top', 20px);
         @include res('font-size', 21px);
         @include res('max-width', 798px);
-        @include media(576){
+        @include media(768){
             @include resa('margin-top', 20px);
             @include resa('font-size', 12px);
             @include resa('max-width', 798px);

@@ -298,7 +298,7 @@ ul{
             opacity: 0.5;
             transition: 0.3s;
             top: 50%;
-            left: 50%;
+            left: 0;
             animation: btnBlick 3s ease infinite;
         }
     }
@@ -430,6 +430,13 @@ ul{
 @keyframes btnBlick{
     0%{
         left: -80px;
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0.5;
     }
     100%{
         left: 100%;
