@@ -47,6 +47,9 @@
             border-radius: 0;
             width: calc(100% - 60px);
             max-width: 800px;
+            @include media(768){
+                width: calc(100% - 30px);
+            }
         }
         .popup__video{
             height: 0;

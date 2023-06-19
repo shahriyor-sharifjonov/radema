@@ -69,14 +69,10 @@ ul{
             position: absolute;
             @include res("top", 82px);
             @include res("right", 54px);
+            z-index: 4;
             @include media(768){
                 @include resa("top", 10px);
                 @include resa("right", 0px);
-            }
-            &:hover{
-                .info{
-                    transform: scale(1);
-                }
             }
         }
     }
@@ -92,6 +88,11 @@ ul{
         @include media(768){
             @include resa('width', 33px);
             @include resa('height', 33px);
+        }
+        &:hover{
+            .info{
+                transform: scale(1);
+            }
         }
         .intro__line{
             @include res('min-width', 26px);
@@ -226,6 +227,15 @@ ul{
         }
         .intro__circle{
             display: none;
+            @include media(768){
+                position: absolute;
+                display: flex;
+                @include resa('right', 40px);
+                @include resa('top', -4px);
+            }
+        }
+        .info{
+            @include resa('right', -38px);
         }
     }
     &__infos{
