@@ -43,15 +43,15 @@ const mask = () => {
     }
 }
 
-// mask()
+mask()
 
 
-// const popupWhatsapp = `
-//     <div class="popup__item">
-//         <p class="popup__subtitle">Ваш телефон в WhatsApp*</p>
-//         <input class="popup__input" type="text" id="phoneMask" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _" required="">
-//     </div>
-// `;
+const popupWhatsapp = `
+    <div class="popup__item">
+        <p class="popup__subtitle">Ваш телефон в WhatsApp*</p>
+        <input class="popup__input" type="text" id="phoneMask" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _" required="">
+    </div>
+`;
 const popupTelegram = `
     <div class="popup__item">
         <p class="popup__subtitle">Ваш username в Telegram*</p>

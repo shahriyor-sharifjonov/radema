@@ -302,6 +302,7 @@
   width: 46.8229166667vw;
   height: 41.9270833333vw;
   background-color: #ffffff;
+  max-height: calc(100% - 50px);
 }
 
 .no-webp .popup#register .popup__body::after {
@@ -315,6 +316,10 @@
   top: 6.71875vw;
   right: 0;
   z-index: -1;
+}
+
+.popup#register__content {
+  position: relative;
 }
 
 .popup#video .popup__body {
@@ -345,6 +350,10 @@
   background-color: #ffffff;
   width: 46.8229166667vw;
   background-color: #ffffff;
+}
+
+.popup#privacy .popup__body::-webkit-scrollbar {
+  display: none;
 }
 
 .popup#privacy .popup__content {
@@ -854,7 +863,7 @@ ul {
 
 .intro__img {
   position: absolute;
-  top: 2.4479166667vw;
+  top: 1.3020833333vw;
   right: 0;
   width: 100%;
 }

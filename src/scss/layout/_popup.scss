@@ -21,6 +21,7 @@
             @include res('width', 899px);
             @include res('height', 805px);
             background-color: #ffffff;
+            max-height: calc(100% - 50px);
             @include media(768){
                 @include resa('width', 899px);
                 height: max-content;
@@ -38,6 +39,10 @@
                     display: none;
                 }
             }
+        }
+        &__content{
+            position: relative;
+            
         }
     }
     &#video{
@@ -68,6 +73,9 @@
     }
     &#privacy{
         .popup__body{
+            &::-webkit-scrollbar{
+                display: none;
+            }
             background-color: #ffffff;
             @include res('width', 899px);
             background-color: #ffffff;

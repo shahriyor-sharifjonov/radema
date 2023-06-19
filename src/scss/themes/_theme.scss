@@ -200,7 +200,7 @@ ul{
     }
     &__img{
         position: absolute;
-        @include res('top', 47px);
+        @include res('top', 25px);
         right: 0;
         width: 100%;
         @include media(768){
