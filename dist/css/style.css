@@ -300,7 +300,7 @@
 
 .popup#register .popup__body {
   width: 46.8229166667vw;
-  height: 41.9270833333vw;
+  height: 43.2291666667vw;
   background-color: #ffffff;
   max-height: calc(100% - 50px);
 }
@@ -491,7 +491,7 @@
   padding-right: 2.3958333333vw;
   border-radius: 26.0416666667vw;
   border-width: 0.0520833333vw;
-  font-size: 0.7291666667vw;
+  font-size: 1.09375vw;
   max-width: 16.9270833333vw;
 }
 
@@ -518,13 +518,13 @@
   padding-right: 1.1979166667vw;
   border-radius: 26.0416666667vw;
   border-width: 0.0520833333vw;
-  font-size: 0.7291666667vw;
+  font-size: 1.09375vw;
   max-width: 16.9270833333vw;
 }
 
 .popup__row select {
   border: none;
-  font-size: 0.7291666667vw;
+  font-size: 1.09375vw;
 }
 
 .popup__phone {
@@ -1485,7 +1485,7 @@ ul {
   .popup__input {
     width: 100%;
     max-width: 100%;
-    font-size: 3.3333333333vw;
+    font-size: 3.8888888889vw;
     height: 13.8888888889vw;
     padding-left: 5.5555555556vw;
     padding-right: 5.5555555556vw;
@@ -1498,14 +1498,14 @@ ul {
   .popup__row {
     width: 100%;
     max-width: 100%;
-    font-size: 3.3333333333vw;
+    font-size: 3.8888888889vw;
     height: 13.8888888889vw;
     padding-left: 5.5555555556vw;
     padding-right: 5.5555555556vw;
   }
 
   .popup__row select {
-    font-size: 3.3333333333vw;
+    font-size: 3.8888888889vw;
   }
 
   .popup__phone {

@@ -19,7 +19,7 @@
     &#register{
         .popup__body{
             @include res('width', 899px);
-            @include res('height', 805px);
+            @include res('height', 830px);
             background-color: #ffffff;
             max-height: calc(100% - 50px);
             @include media(768){
@@ -130,7 +130,6 @@
         overflow-y: auto;
         @include media(768){
             @include resa('border-radius', 20px);
-            // @include resa('height', 700px);
             height: max-content;
             max-height: calc(100% - 30px);
         }
@@ -226,12 +225,12 @@
         @include res('padding-right', 46px);
         @include res('border-radius', 500px);
         @include res('border-width', 1px);
-        @include res('font-size', 14px);
+        @include res('font-size', 21px);
         @include res('max-width', 325px);
         @include media(768){
             width: 100%;
             max-width: 100%;
-            @include resa('font-size', 12px);
+            @include resa('font-size', 14px);
             @include resa('height', 50px);
             @include resa('padding-left', 20px);
             @include resa('padding-right', 20px);
@@ -256,21 +255,21 @@
         @include res('padding-right', 23px);
         @include res('border-radius', 500px);
         @include res('border-width', 1px);
-        @include res('font-size', 14px);
+        @include res('font-size', 21px);
         @include res('max-width', 325px);
         @include media(768){
             width: 100%;
             max-width: 100%;
-            @include resa('font-size', 12px);
+            @include resa('font-size', 14px);
             @include resa('height', 50px);
             @include resa('padding-left', 20px);
             @include resa('padding-right', 20px);
         }
         select{
             border: none;
-            @include res('font-size', 14px);
+            @include res('font-size', 21px);
             @include media(768){
-                @include resa('font-size', 12px);
+                @include resa('font-size', 14px);
             }
         }
     }
