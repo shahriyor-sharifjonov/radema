@@ -60,8 +60,105 @@ ul{
     &__title{
         @include res("font-size", 66px);
         line-height: 118%;
+        position: relative;
+        width: max-content;
         @include media(768){ 
             @include resa("font-size", 22px);
+        }
+        .intro__circle{
+            position: absolute;
+            @include res("top", 82px);
+            @include res("right", 54px);
+            @include media(768){
+                @include resa("top", 10px);
+                @include resa("right", 0px);
+            }
+            &:hover{
+                .info{
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+    &__circle{
+        z-index: 2;
+        cursor: pointer;
+        @include res('width', 33px);
+        @include res('height', 33px);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @include media(768){
+            @include resa('width', 33px);
+            @include resa('height', 33px);
+        }
+        .intro__line{
+            @include res('min-width', 26px);
+            @include res('width', 26px);
+            @include res('height', 26px);
+            @include res('font-size', 19px);
+            @include res('padding-top', 4px);
+            background: #E5192E;
+            border-radius: 50%;
+            font-family: 'Tiro Gurmukhi';
+            font-style: italic;
+            font-weight: 400;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include media(768){
+                @include resa('min-width', 15px);
+                @include resa('width', 15px);
+                @include resa('height', 15px); 
+                @include resa('font-size', 10px);
+                @include resa('padding-top', 3px);
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                border: solid #ee1a24;
+                @include res('width', 33px);
+                @include res('height', 33px);
+                @include res('border-width', 1px);
+                top: 50%;
+                left: 50%;
+                border-radius: 50%;
+                border-left-color: transparent;
+                border-right-color: transparent;
+                animation-name: rotateRevers;
+                animation-iteration-count: infinite;
+                animation-duration: 4s;
+                animation-timing-function: linear;
+                @include media(768){
+                    @include resa('width', 22px);
+                    @include resa('height', 22px);
+                    @include resa('border-width', 1px);
+                }
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                border: solid #ee1a24;
+                @include res('width', 40px);
+                @include res('height', 40px);
+                @include res('border-width', 1px);
+                top: 50%;
+                left: 50%;
+                border-radius: 50%;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+                animation-name: rotate;
+                animation-iteration-count: infinite;
+                animation-duration: 4s;
+                animation-timing-function: linear;
+                @include media(768){
+                    @include resa('width', 29px);
+                    @include resa('height', 29px);
+                    @include resa('border-width', 1px);
+                }
+            }
         }
     }
     &__p{
@@ -328,8 +425,8 @@ ul{
         &::before{
             width: 100%;
             height: 100%;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
             border: solid #ee1a24;
             @include res("border-width", 1px);
             position: absolute;
@@ -427,6 +524,98 @@ ul{
         }
     }
 }
+.info{
+    position: absolute;
+    background: #FFFFFF;
+    @include res('border-radius', 20px);
+    @include res('padding-top', 46px);
+    @include res('padding-right', 33px);
+    @include res('padding-bottom', 20px);
+    @include res('padding-left', 43px);
+    @include res('min-width', 540px);
+    @include res('width', 540px);
+    @include res('right', 40px);
+    @include res('top', -130px);
+    transform: translateY(-50%);
+    z-index: 50;
+    transform: scale(0);
+    transition: 300ms ease;
+    @include media(768){
+        @include resa('border-radius', 20px);
+        @include resa('padding-top', 15px);
+        @include resa('padding-right', 15px);
+        @include resa('padding-bottom', 15px);
+        @include resa('padding-left', 15px);
+        @include resa('right', -25px);
+        @include resa('top', 35px);
+        min-width: 0;
+        width: 100vw;
+    }
+    &__title{
+        font-weight: 700;
+        font-style: normal;
+        color: #E5192E;
+        @include res('margin-bottom', 20px);
+        @include res('font-size', 28px);
+        line-height: 140%;
+        @include media(768){
+            @include resa('margin-bottom', 15px);
+            @include resa('font-size', 18px);
+            @include resa('max-width', 300px);
+        }
+    }
+    &__list{
+        @include res('margin-bottom', 40px);
+        @include media(768){
+            @include resa('margin-bottom', 20px);
+        }
+    }
+    &__li{
+        @include res('font-size', 20px);
+        @include res('padding-left', 19px);
+        font-style: normal;
+        font-weight: 400;
+        color: #000000;
+        position: relative;
+        line-height: 140%;
+        @include media(768){
+            @include resa('font-size', 16px);
+            @include resa('padding-left', 19px);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            @include res('left', 0px);
+            @include res('top', 8px); 
+            @include res('width', 8px);
+            @include res('height', 8px);
+            background: #E5192E;
+            border-radius: 50%;
+            @include media(768){
+                @include resa('width', 8px);
+                @include resa('height', 8px);
+                @include resa('top', 6px); 
+            }
+        }
+        &:not(:last-of-type){
+            margin-bottom: 11px;
+        }
+    }
+    &__p{
+        font-style: normal;
+        font-weight: 400;
+        @include res('font-size', 19px);
+        line-height: 140%;
+        color: #000000;
+        @include media(768){
+            @include resa('font-size', 16px);
+        }
+        span{
+            color: #E5192E;
+            font-weight: 700;
+        }
+    }
+}
 @keyframes btnBlick{
     0%{
         left: -80px;
@@ -452,9 +641,9 @@ ul{
 }
 @keyframes rotateRevers {
     0%{
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100%{
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
